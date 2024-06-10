@@ -1,0 +1,2114 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DraCor API Tutorial &#8212; CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-1_api-tutorial';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="To catch a protagonist in DraCor" href="5-2-2_catch-a-protagonist-in-dracor.html" />
+    <link rel="prev" title="5.2 Programmable Corpora &amp; Network Analysis. Advanced" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    CLS INFRA Training School: ExploreCor: Using Programmable Corpora in Computational Literary Studies
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1_Introduction/README.html">1. Introduction to Programmable Corpora</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1_Introduction/1-3_DraCor_Showcase.html">1.3 Using DraCor: Four Showcases</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_Corpora_in_Research/README.html">2. Corpora in CLS Research. User Perspectives</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../README.html">5. Exploring Programmable Corpora (Focus: Network Analysis)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../5-1_Exploring_Programmable_Corpora_Beginners/README.html">5.1 Programmable Corpora &amp; Network Analysis. Beginners</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">5.2 Programmable Corpora &amp; Network Analysis. Advanced</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">DraCor API Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-2-2_catch-a-protagonist-in-dracor.html"><em>To catch a protagonist</em> in DraCor</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../6_Reproducibility/README.html">6. Reproducibility in CLS Research</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../6_Reproducibility/6-2_custom_local_dracor.html">6.2 Setting up a custom DraCor infrastructure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_Open_Topics/README.html">7. Open Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ingoboerner/dracor-explorecor" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ingoboerner/dracor-explorecor/issues/new?title=Issue%20on%20page%20%2F5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-1_api-tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-1_api-tutorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>DraCor API Tutorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">0. Import libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-api-calls-without-selected-parameters">1. Basic API calls without selected parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info-info-about-the-api"><code class="docutils literal notranslate"><span class="pre">/info</span></code>: Info about the API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpora-list-available-corpora"><code class="docutils literal notranslate"><span class="pre">corpora/</span></code>: List available corpora</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include-corpora-metrics">Include corpora metrics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-calls-with-selected-parameters">2. API calls with selected parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-a-corpusname">1. Choose a  <code class="docutils literal notranslate"><span class="pre">corpusname/</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-metadata">Inspect metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-do-with-the-metadata-examples">3. What to do with the metadata - Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play-select-text">3.  <code class="docutils literal notranslate"><span class="pre">play/</span></code>: Select text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-single-play-requests">Specify single play requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-word-list">Create word list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze">Analyze</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-function-to-handle-the-requests-and-parse-the-result">Generic function to handle the requests and parse the result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gender-of-characters">Example: Gender of Characters</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dracor-api-tutorial">
+<h1>DraCor API Tutorial<a class="headerlink" href="#dracor-api-tutorial" title="Link to this heading">#</a></h1>
+<section id="import-libraries">
+<h2>0. Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h2>
+<p>To use the <a class="reference external" href="https://dracor.org/doc/api">DraCor-API</a> we need to send HTTP-Requests to the API: <code class="docutils literal notranslate"><span class="pre">https://dracor.org/api</span></code>. In Python HTTP-Request can be sent with the library <code class="docutils literal notranslate"><span class="pre">requests</span></code> (<a class="reference external" href="https://requests.readthedocs.io">https://requests.readthedocs.io</a>). We have to import this library:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To fascilitate the work with the metadata of the corpora in DraCor, we can use the library <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (<a class="reference external" href="https://pandas.pydata.org/docs/">https://pandas.pydata.org/docs/</a>). To be able to plot data with pandas, we also need to import the library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (<a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a>). The libraries are imported below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="basic-api-calls-without-selected-parameters">
+<h2>1. Basic API calls without selected parameters<a class="headerlink" href="#basic-api-calls-without-selected-parameters" title="Link to this heading">#</a></h2>
+</section>
+<section id="info-info-about-the-api">
+<h2><code class="docutils literal notranslate"><span class="pre">/info</span></code>: Info about the API<a class="headerlink" href="#info-info-about-the-api" title="Link to this heading">#</a></h2>
+<p>We can get information about the API and DraCor data by sending <strong>GET requests</strong> to the API.</p>
+<p>For this, we take the base URL, saved in the variable <code class="docutils literal notranslate"><span class="pre">API_URL</span></code> below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save base URL in variable  </span>
+<span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;https://dracor.org/api/v1/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then extend the URL to ask for specific information. If we want to know more about the API itself, we can use the parameter <code class="docutils literal notranslate"><span class="pre">info/</span></code> saved in the variable <code class="docutils literal notranslate"><span class="pre">INFO_EXTENSION</span></code>.</p>
+<p>This will give us:</p>
+<ul class="simple">
+<li><p>name</p></li>
+<li><p>version</p></li>
+<li><p>status</p></li>
+<li><p>the version of the database (“existdb”)</p></li>
+</ul>
+<p>The documentation of this endpoint can be found here: <a class="reference external" href="https://dracor.org/doc/api#/public/api-info">https://dracor.org/doc/api#/public/api-info</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># to get the info we extend the API URL by the parameter &quot;info&quot;</span>
+<span class="c1"># save &quot;info&quot; parameter in variable</span>
+<span class="n">INFO_EXTENSION</span> <span class="o">=</span> <span class="s2">&quot;info&quot;</span>
+
+<span class="c1"># add extension to the base URL</span>
+<span class="n">api_info_url</span> <span class="o">=</span> <span class="n">API_URL</span> <span class="o">+</span> <span class="n">INFO_EXTENSION</span>
+
+<span class="c1"># perform get request</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_info_url</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{\n  &quot;name&quot; : &quot;DraCor API v1&quot;,\n  &quot;version&quot; : &quot;1.0.2&quot;,\n  &quot;status&quot; : &quot;stable&quot;,\n  &quot;existdb&quot; : &quot;6.2.0&quot;,\n  &quot;base&quot; : &quot;https://dracor.org/api/v1&quot;\n}&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The API returns the information in the JSON format, which we have to parse. We can call <code class="docutils literal notranslate"><span class="pre">.json()</span></code> on the request object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read response as JSON</span>
+<span class="n">parsed_response</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">parsed_response</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;DraCor API v1&#39;,
+ &#39;version&#39;: &#39;1.0.2&#39;,
+ &#39;status&#39;: &#39;stable&#39;,
+ &#39;existdb&#39;: &#39;6.2.0&#39;,
+ &#39;base&#39;: &#39;https://dracor.org/api/v1&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As the response is a dictionary object, we can e.g. get the current version of the API by accessing it with the keyword “version”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current version of the Dracor-API is </span><span class="si">{</span><span class="n">parsed_response</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The current version of the Dracor-API is 1.0.2.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="corpora-list-available-corpora">
+<h2><code class="docutils literal notranslate"><span class="pre">corpora/</span></code>: List available corpora<a class="headerlink" href="#corpora-list-available-corpora" title="Link to this heading">#</a></h2>
+<p>With the extension <code class="docutils literal notranslate"><span class="pre">corpora/</span></code> saved in <code class="docutils literal notranslate"><span class="pre">CORPORA_EXT_PLAIN</span></code> we can display the list of corpora available in DraCor.</p>
+<p>The documentation of this endpoint can be found here: <a class="reference external" href="https://dracor.org/doc/api#/public/list-corpora">https://dracor.org/doc/api#/public/list-corpora</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save &quot;corpora&quot; parameter in variable</span>
+<span class="n">CORPORA_EXT_PLAIN</span> <span class="o">=</span> <span class="s2">&quot;corpora&quot;</span>
+<span class="c1"># add parameter to base URL to get information about the DraCor corpora </span>
+<span class="n">api_corpora_url</span> <span class="o">=</span> <span class="n">API_URL</span> <span class="o">+</span> <span class="n">CORPORA_EXT_PLAIN</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL for getting the list of corpora: </span><span class="si">{</span><span class="n">api_corpora_url</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># perform API request</span>
+<span class="c1"># parse response with .json</span>
+<span class="n">corpus_list</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_corpora_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1">#save corpus abbreviations in a list for later checking </span>
+<span class="n">corpus_abbreviations</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># iterate through corpus list and print information</span>
+<span class="k">for</span> <span class="n">corpus_description</span> <span class="ow">in</span> <span class="n">corpus_list</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">corpus_description</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">corpus_description</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">corpus_abbreviations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>URL for getting the list of corpora: https://dracor.org/api/v1/corpora
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>als: Alsatian Drama Corpus
+bash: Bashkir Drama Corpus
+cal: Calderón Drama Corpus
+dutch: Dutch Drama Corpus
+eng: English Drama Corpus
+fre: French Drama Corpus
+ger: German Drama Corpus
+gersh: German Shakespeare Drama Corpus
+greek: Greek Drama Corpus
+hun: Hungarian Drama Corpus
+ita: Italian Drama Corpus
+pol: Polish Drama Corpus
+rom: Roman Drama Corpus
+rus: Russian Drama Corpus
+shake: Shakespeare Drama Corpus
+span: Spanish Drama Corpus
+swe: Swedish Drama Corpus
+tat: Tatar Drama Corpus
+u: Ukrainian Drama Corpus
+</pre></div>
+</div>
+</div>
+</div>
+<section id="include-corpora-metrics">
+<h3>Include corpora metrics<a class="headerlink" href="#include-corpora-metrics" title="Link to this heading">#</a></h3>
+<p>To not only get the abbreviation and the name of corpora but also information about the number of speakers, the word count etc. we can change our API call so that these metrics are included in the response. We can do so by</p>
+<ul class="simple">
+<li><p>adding a <code class="docutils literal notranslate"><span class="pre">?</span></code> to indicate that we will pass a key-value pair to the API</p></li>
+<li><p>add the key-value pair like this <code class="docutils literal notranslate"><span class="pre">include=metrics</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save metrics parameter in variable</span>
+<span class="n">METRICS_PARAM_EXT</span> <span class="o">=</span> <span class="s2">&quot;?include=metrics&quot;</span>
+
+<span class="c1"># add parameter to URL to get more information about the corpora </span>
+<span class="n">api_corpora_metrics_urls</span> <span class="o">=</span> <span class="n">api_corpora_url</span> <span class="o">+</span> <span class="n">METRICS_PARAM_EXT</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL for getting the list of corpora with metrics included: </span><span class="si">{</span><span class="n">api_corpora_metrics_urls</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># perform API request</span>
+<span class="n">corpora_metrics</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_corpora_metrics_urls</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># iterate through corpus list and print information</span>
+<span class="c1"># add the number of plays to the print statement which is retrieved from the corpus metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Abbreviation: Corpus Name (Number of plays)&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">corpus</span> <span class="ow">in</span> <span class="n">corpora_metrics</span><span class="p">:</span>
+    <span class="n">abbreviation</span> <span class="o">=</span> <span class="n">corpus</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+    <span class="n">num_of_plays</span> <span class="o">=</span> <span class="n">corpus</span><span class="p">[</span><span class="s1">&#39;metrics&#39;</span><span class="p">][</span><span class="s1">&#39;plays&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">abbreviation</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">corpus</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">num_of_plays</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>URL for getting the list of corpora with metrics included: https://dracor.org/api/v1/corpora?include=metrics
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Abbreviation: Corpus Name (Number of plays)
+als: Alsatian Drama Corpus (30)
+bash: Bashkir Drama Corpus (3)
+cal: Calderón Drama Corpus (205)
+dutch: Dutch Drama Corpus (98)
+eng: English Drama Corpus (434)
+fre: French Drama Corpus (1560)
+ger: German Drama Corpus (700)
+gersh: German Shakespeare Drama Corpus (38)
+greek: Greek Drama Corpus (40)
+hun: Hungarian Drama Corpus (74)
+ita: Italian Drama Corpus (139)
+pol: Polish Drama Corpus (10)
+rom: Roman Drama Corpus (36)
+rus: Russian Drama Corpus (212)
+shake: Shakespeare Drama Corpus (37)
+span: Spanish Drama Corpus (25)
+swe: Swedish Drama Corpus (68)
+tat: Tatar Drama Corpus (3)
+u: Ukrainian Drama Corpus (40)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="api-calls-with-selected-parameters">
+<h2>2. API calls with selected parameters<a class="headerlink" href="#api-calls-with-selected-parameters" title="Link to this heading">#</a></h2>
+<p>To get more information than included in the corpus metrics for a specific corpus, we first need to select a corpus from the list above.</p>
+<section id="choose-a-corpusname">
+<h3>1. Choose a  <code class="docutils literal notranslate"><span class="pre">corpusname/</span></code><a class="headerlink" href="#choose-a-corpusname" title="Link to this heading">#</a></h3>
+<p>To choose a corpus in the field below, type the abbreviation of the corpus as listed above.
+The name you choose is saved in the variable <code class="docutils literal notranslate"><span class="pre">corpusname</span></code>.</p>
+<p>The documentation of this endpoint can be found here: <a class="reference external" href="https://dracor.org/doc/api#/public/list-corpus-content">https://dracor.org/doc/api#/public/list-corpus-content</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a corpus </span>
+<span class="c1"># to use the interactive mode in Jupyter Lab change the type of the following cell to &quot;Code&quot;</span>
+<span class="c1"># The cell is not included in the HTML rendering</span>
+
+<span class="n">corpusname</span> <span class="o">=</span> <span class="s2">&quot;swe&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save corpora parameter (with slash) and metadata parameter in variables</span>
+<span class="n">CORPORA_EXT</span> <span class="o">=</span> <span class="s2">&quot;corpora/&quot;</span>
+<span class="n">METADAT_EXT</span> <span class="o">=</span> <span class="s2">&quot;/metadata&quot;</span>
+
+<span class="c1"># build URL</span>
+<span class="n">corpus_metadata_path</span> <span class="o">=</span> <span class="n">API_URL</span> <span class="o">+</span> <span class="n">CORPORA_EXT</span> <span class="o">+</span> <span class="n">corpusname</span> <span class="o">+</span> <span class="n">METADAT_EXT</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL for getting the metadata of a specific corpus: </span><span class="si">{</span><span class="n">corpus_metadata_path</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># perform request</span>
+<span class="n">metadata_file</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">corpus_metadata_path</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;accept&quot;</span><span class="p">:</span> <span class="s2">&quot;text/csv&quot;</span><span class="p">},</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">metadata_file</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">decode_content</span><span class="o">=</span><span class="kc">True</span>
+
+<span class="c1"># read metadata to DataFrame</span>
+<span class="n">metadata_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">metadata_file</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>URL for getting the metadata of a specific corpus: https://dracor.org/api/v1/corpora/swe/metadata
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="inspect-metadata">
+<h3>Inspect metadata<a class="headerlink" href="#inspect-metadata" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display first five lines of the retrieved metadata </span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>id</th>
+      <th>wikidataId</th>
+      <th>firstAuthor</th>
+      <th>numOfCoAuthors</th>
+      <th>title</th>
+      <th>subtitle</th>
+      <th>normalizedGenre</th>
+      <th>digitalSource</th>
+      <th>originalSourcePublisher</th>
+      <th>...</th>
+      <th>numEdges</th>
+      <th>yearWritten</th>
+      <th>numOfSegments</th>
+      <th>wikipediaLinkCount</th>
+      <th>numOfActs</th>
+      <th>wordCountText</th>
+      <th>wordCountSp</th>
+      <th>wordCountStage</th>
+      <th>numOfP</th>
+      <th>numOfL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>agrell-domd</td>
+      <td>swe000001</td>
+      <td>Q18238498</td>
+      <td>Agrell</td>
+      <td>0</td>
+      <td>Dömd</td>
+      <td>Skådespel i tre akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>96</td>
+      <td>NaN</td>
+      <td>43</td>
+      <td>1</td>
+      <td>3</td>
+      <td>22939</td>
+      <td>22206</td>
+      <td>2496</td>
+      <td>1122</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>agrell-en-hufvudsak</td>
+      <td>swe000002</td>
+      <td>Q18238627</td>
+      <td>Agrell</td>
+      <td>0</td>
+      <td>En hufvudsak</td>
+      <td>Komedi i en akt</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>7</td>
+      <td>1</td>
+      <td>1</td>
+      <td>7249</td>
+      <td>7024</td>
+      <td>570</td>
+      <td>490</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>agrell-en-lektion</td>
+      <td>swe000003</td>
+      <td>Q10483370</td>
+      <td>Agrell</td>
+      <td>0</td>
+      <td>En lektion</td>
+      <td>Konversation i en akt</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4229</td>
+      <td>4028</td>
+      <td>361</td>
+      <td>221</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>agrell-ensam</td>
+      <td>swe000004</td>
+      <td>Q18238675</td>
+      <td>Agrell</td>
+      <td>0</td>
+      <td>Ensam</td>
+      <td>Skådespel i tre akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>21</td>
+      <td>1</td>
+      <td>3</td>
+      <td>16674</td>
+      <td>15558</td>
+      <td>3308</td>
+      <td>904</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>agrell-hvarfor</td>
+      <td>swe000005</td>
+      <td>Q18242708</td>
+      <td>Agrell</td>
+      <td>0</td>
+      <td>"Hvarför?"</td>
+      <td>Komedie i en akt</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>9</td>
+      <td>1</td>
+      <td>1</td>
+      <td>6481</td>
+      <td>6183</td>
+      <td>406</td>
+      <td>369</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 42 columns</p>
+</div></div></div>
+</div>
+<p>Look at information available in the metadata</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print column names available in meta data </span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;name&#39;, &#39;id&#39;, &#39;wikidataId&#39;, &#39;firstAuthor&#39;, &#39;numOfCoAuthors&#39;, &#39;title&#39;,
+       &#39;subtitle&#39;, &#39;normalizedGenre&#39;, &#39;digitalSource&#39;,
+       &#39;originalSourcePublisher&#39;, &#39;originalSourcePubPlace&#39;,
+       &#39;originalSourceYear&#39;, &#39;originalSourceNumberOfPages&#39;, &#39;yearNormalized&#39;,
+       &#39;size&#39;, &#39;libretto&#39;, &#39;averageClustering&#39;, &#39;density&#39;, &#39;averagePathLength&#39;,
+       &#39;maxDegreeIds&#39;, &#39;averageDegree&#39;, &#39;diameter&#39;, &#39;datePremiered&#39;,
+       &#39;yearPremiered&#39;, &#39;yearPrinted&#39;, &#39;maxDegree&#39;, &#39;numOfSpeakers&#39;,
+       &#39;numOfSpeakersFemale&#39;, &#39;numOfSpeakersMale&#39;, &#39;numOfSpeakersUnknown&#39;,
+       &#39;numOfPersonGroups&#39;, &#39;numConnectedComponents&#39;, &#39;numEdges&#39;,
+       &#39;yearWritten&#39;, &#39;numOfSegments&#39;, &#39;wikipediaLinkCount&#39;, &#39;numOfActs&#39;,
+       &#39;wordCountText&#39;, &#39;wordCountSp&#39;, &#39;wordCountStage&#39;, &#39;numOfP&#39;, &#39;numOfL&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-to-do-with-the-metadata-examples">
+<h3>3. What to do with the metadata - Examples<a class="headerlink" href="#what-to-do-with-the-metadata-examples" title="Link to this heading">#</a></h3>
+<p>The library pandas allows us to plot selected columns against each other. If we want to see if one parameter e.g. the number of characters (as in 1) develops over time, we can set the x-axis to the years the plays were created (“yearNormalized) and the y-axis to the number of characters (“size”) in the play.</p>
+<p>The documentation of the <code class="docutils literal notranslate"><span class="pre">plot</span></code> function can be found here: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html</a></p>
+<ol class="arabic simple">
+<li><p>Plot the number of characters (“size”) in the plays over time (“yearNormalized”)</p></li>
+<li><p>Plot the length of the play (“wordCountText”) over time (“yearNormalized”)</p></li>
+<li><p>Get the five longest plays</p>
+<ul class="simple">
+<li><p>sort plays by “wordCountText”</p></li>
+<li><p>show first five</p></li>
+</ul>
+</li>
+<li><p>Get number of plays published after 1800 and before 1900</p>
+<ul class="simple">
+<li><p>filter: “yearNormalized”</p></li>
+<li><p>filter-value: 1800 and 1900</p></li>
+<li><p>filter-operation: &gt; and &lt;</p></li>
+</ul>
+</li>
+<li><p>Plot development of the length of stage descriptions</p>
+<ul class="simple">
+<li><p>filter: ‘wordCountStage’</p></li>
+<li><p>calculate percentage of stage directions in relation to wordcount in new column</p></li>
+<li><p>plot by time</p></li>
+</ul>
+</li>
+<li><p>Plot the relation of female speakers over time</p>
+<ul class="simple">
+<li><p>filter: ‘numOfSpeakers’, ‘numOfSpeakersFemale’</p></li>
+<li><p>calculate percentage of female speakers</p></li>
+<li><p>plot by time</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Get number of characters of each play and plot the normalized year</span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;yearNormalized&#39;, ylabel=&#39;size&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/104a04738dbdfb0d7c20f522d929590c6517105af55eb3d584e462f141a69eaf.png" src="../../_images/104a04738dbdfb0d7c20f522d929590c6517105af55eb3d584e462f141a69eaf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Plot length of play in words by the normalized year</span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;wordCountText&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;yearNormalized&#39;, ylabel=&#39;wordCountText&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/55e9e0a0a577892c89f2efcf9276d8e8452bac069dd6d02b1df64fc2d16af4c4.png" src="../../_images/55e9e0a0a577892c89f2efcf9276d8e8452bac069dd6d02b1df64fc2d16af4c4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Sort plays by wordcount, show first 5 entries</span>
+<span class="n">metadata_by_length</span> <span class="o">=</span> <span class="n">metadata_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;wordCountText&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># get the first five entries </span>
+<span class="n">metadata_by_length</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>id</th>
+      <th>wikidataId</th>
+      <th>firstAuthor</th>
+      <th>numOfCoAuthors</th>
+      <th>title</th>
+      <th>subtitle</th>
+      <th>normalizedGenre</th>
+      <th>digitalSource</th>
+      <th>originalSourcePublisher</th>
+      <th>...</th>
+      <th>numEdges</th>
+      <th>yearWritten</th>
+      <th>numOfSegments</th>
+      <th>wikipediaLinkCount</th>
+      <th>numOfActs</th>
+      <th>wordCountText</th>
+      <th>wordCountSp</th>
+      <th>wordCountStage</th>
+      <th>numOfP</th>
+      <th>numOfL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>54</th>
+      <td>strindberg-till-damaskus</td>
+      <td>swe000053</td>
+      <td>Q931843</td>
+      <td>Strindberg</td>
+      <td>0</td>
+      <td>Till Damaskus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>273</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>5</td>
+      <td>9</td>
+      <td>37253</td>
+      <td>34125</td>
+      <td>4374</td>
+      <td>1906</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>hedberg-rospiggarna</td>
+      <td>swe000015</td>
+      <td>Q59618593</td>
+      <td>Hedberg</td>
+      <td>0</td>
+      <td>Rospiggarna</td>
+      <td>Folklustspel med sång i fyra akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>341</td>
+      <td>NaN</td>
+      <td>51</td>
+      <td>0</td>
+      <td>4</td>
+      <td>30399</td>
+      <td>28436</td>
+      <td>6288</td>
+      <td>1736</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>strindberg-master-olof</td>
+      <td>swe000049</td>
+      <td>Q1765367</td>
+      <td>Strindberg</td>
+      <td>0</td>
+      <td>Mäster Olof</td>
+      <td>Skådespel i fem akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>347</td>
+      <td>NaN</td>
+      <td>9</td>
+      <td>5</td>
+      <td>5</td>
+      <td>28441</td>
+      <td>26257</td>
+      <td>2998</td>
+      <td>1609</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>malling-fru-leonora</td>
+      <td>swe000030</td>
+      <td>Q59645535</td>
+      <td>Malling</td>
+      <td>0</td>
+      <td>Fru Leonora</td>
+      <td>Komedi i fyra akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>32</td>
+      <td>NaN</td>
+      <td>36</td>
+      <td>0</td>
+      <td>4</td>
+      <td>25227</td>
+      <td>23373</td>
+      <td>4226</td>
+      <td>890</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>molander-varflod</td>
+      <td>swe000034</td>
+      <td>Q59618305</td>
+      <td>Molander</td>
+      <td>0</td>
+      <td>Vårflod</td>
+      <td>Komedi i fyra akter</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>27</td>
+      <td>NaN</td>
+      <td>57</td>
+      <td>0</td>
+      <td>4</td>
+      <td>24349</td>
+      <td>22192</td>
+      <td>3351</td>
+      <td>1215</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 42 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Get number of plays between 1800 and 1900 </span>
+<span class="n">num_of_plays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">metadata_df</span><span class="p">[(</span><span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1800</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1900</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of plays in the selected time period: </span><span class="si">{</span><span class="n">num_of_plays</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of plays in the selected time period: 67
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Calculate percentage of tokens in stage directions in relation to all tokens </span>
+<span class="c1"># save the calculated percentages in a new column</span>
+<span class="n">stage_percentage</span> <span class="o">=</span> <span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;wordCountStage&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;wordCountText&quot;</span><span class="p">]</span>
+<span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;wordCountStagePercentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stage_percentage</span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;wordCountStagePercentage&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;yearNormalized&#39;, ylabel=&#39;wordCountStagePercentage&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/c9289bfe72e7e5196eeb5be8a22e12424dd7a6f87aae17d3ebbe7c989e4b6aea.png" src="../../_images/c9289bfe72e7e5196eeb5be8a22e12424dd7a6f87aae17d3ebbe7c989e4b6aea.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Display the relation of female speaker over time</span>
+<span class="n">speakers_total</span> <span class="o">=</span> <span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;numOfSpeakers&quot;</span><span class="p">]</span>
+<span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;numOfSpeakersFemalePercentage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metadata_df</span><span class="p">[</span><span class="s2">&quot;numOfSpeakersFemale&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">speakers_total</span>
+<span class="n">metadata_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;yearNormalized&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;numOfSpeakersFemalePercentage&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;yearNormalized&#39;, ylabel=&#39;numOfSpeakersFemalePercentage&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/1d9fef0ba8b55d57effb70c1c8caf5fb0d9c4732cc634d16dd1247185cb786fc.png" src="../../_images/1d9fef0ba8b55d57effb70c1c8caf5fb0d9c4732cc634d16dd1247185cb786fc.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="play-select-text">
+<h2>3.  <code class="docutils literal notranslate"><span class="pre">play/</span></code>: Select text<a class="headerlink" href="#play-select-text" title="Link to this heading">#</a></h2>
+<p>The API also allows us to load single texts or abstract representation such as network data of single texts.
+For this we need to extend the URL by the parameter <code class="docutils literal notranslate"><span class="pre">play/</span></code>, followed by the name of the play as listed in metadata. This will give us:</p>
+<ul class="simple">
+<li><p>metadata of the play</p></li>
+<li><p>network data to the play</p></li>
+<li><p>speaker list</p></li>
+<li><p>division into scenes and the appearing speakers</p></li>
+</ul>
+<p>The documentation of this endpoint can be found here: <a class="reference external" href="https://dracor.org/doc/api#/public/play-info">https://dracor.org/doc/api#/public/play-info</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save play parameter in variable</span>
+<span class="n">PLAY_EXT</span> <span class="o">=</span> <span class="s2">&quot;/plays/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a play </span>
+<span class="c1"># to use the interactive mode in Jupyter Lab change the type of the following cell to &quot;Code&quot;</span>
+<span class="c1"># The cell is not included in the HTML rendering</span>
+
+<span class="n">play_name</span> <span class="o">=</span> <span class="s2">&quot;strindberg-gillets-hemlighet&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build URL</span>
+<span class="n">play_path</span> <span class="o">=</span> <span class="n">API_URL</span> <span class="o">+</span> <span class="n">CORPORA_EXT</span> <span class="o">+</span> <span class="n">corpusname</span> <span class="o">+</span> <span class="n">PLAY_EXT</span> <span class="o">+</span> <span class="n">play_name</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL for getting information of a specific play: </span><span class="si">{</span><span class="n">play_path</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># perform request</span>
+<span class="n">play_info</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">play_path</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># extract character names</span>
+<span class="n">character_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">play_info</span><span class="p">[</span><span class="s2">&quot;characters&quot;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Character list&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">character_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>URL for getting information of a specific play: https://dracor.org/api/v1/corpora/swe/plays/strindberg-gillets-hemlighet
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Character list
+[&#39;Helvig&#39;, &#39;Nils&#39;, &#39;Olof&#39;, &#39;Cecilia&#39;, &#39;Jurgen&#39;, &#39;Jacques&#39;, &#39;Gerhard&#39;, &#39;Hans&#39;, &#39;Sten&#39;, &#39;Claus&#39;, &#39;Martin&#39;, &#39;Margaretha&#39;, &#39;1:ste BORGAREN&#39;, &#39;2:dre BORGAREN&#39;, &#39;Tre Borgare&#39;, &#39;3:dje BORGAREN&#39;, &#39;Gesäller&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>How else could we get the characters of the play? Is there a more specific API call if we only want that information?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># API call for getting a specific play is saved in the variable `play_path`</span>
+<span class="c1"># This is it consists of </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">API_URL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CORPORA_EXT</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">corpusname</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PLAY_EXT</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">play_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Combined the URL looks like this: </span><span class="si">{</span><span class="n">play_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://dracor.org/api/v1/
+corpora/
+swe
+/plays/
+strindberg-gillets-hemlighet
+Combined the URL looks like this: https://dracor.org/api/v1/corpora/swe/plays/strindberg-gillets-hemlighet
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can add something to the URL like this:</span>
+<span class="c1"># (just replace anything-you-want-to-add with the keyword of your choice)</span>
+<span class="c1"># add your chosen parameter to the path to the play you selected</span>
+<span class="n">character_url</span> <span class="o">=</span> <span class="n">play_path</span> <span class="o">+</span> <span class="s2">&quot;/anything-you-want-to-add&quot;</span>
+
+<span class="c1"># perform request</span>
+<span class="n">character_info</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">character_url</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">character_info</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It looks like your URL is not valid. Status code is: </span><span class="si">{</span><span class="n">character_info</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Success! Here is the output:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character_info</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It looks like your URL is not valid. Status code is: 400
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="specify-single-play-requests">
+<h2>Specify single play requests<a class="headerlink" href="#specify-single-play-requests" title="Link to this heading">#</a></h2>
+<p>We can specify which information of the play we want to retrieve. We do so by extending the URL by an additional parameter. If for example we want to get the spoken text of the characters, we need to extend the URL by <code class="docutils literal notranslate"><span class="pre">spoken-text-by-character</span></code>.</p>
+<p>The documentation of this endpoint can be found here: <a class="reference external" href="https://dracor.org/doc/api#/public/play-spoken-text-by-character">https://dracor.org/doc/api#/public/play-spoken-text-by-character</a></p>
+<p>You could also choose other information to retrieve e.g. stage directions and speakers, spoken text only (without the attribution to the speaker) and so on. Just have a look at the API documentation and see what parameters can be added after <code class="docutils literal notranslate"><span class="pre">{playname}</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save parameter to get more specific data to the selected play in a variable </span>
+<span class="n">PLAY_SPECIFICATION</span> <span class="o">=</span> <span class="s2">&quot;/spoken-text-by-character&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extend play URL </span>
+<span class="n">play_spec_path</span> <span class="o">=</span> <span class="n">play_path</span> <span class="o">+</span> <span class="n">PLAY_SPECIFICATION</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL for getting specified information of a play: </span><span class="si">{</span><span class="n">play_spec_path</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># perform request </span>
+<span class="n">play_spec</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">play_spec_path</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>URL for getting specified information of a play: https://dracor.org/api/v1/corpora/swe/plays/strindberg-gillets-hemlighet/spoken-text-by-character
+</pre></div>
+</div>
+</div>
+</div>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>We can now perform some analyses with the text we retrieved. With just some minor preprocessing (tokenization) we can ask:</p>
+<ul class="simple">
+<li><p>Who talks most often about love or guns</p></li>
+</ul>
+<p>Since the characters are also annotated with gender with can explore simple gender related questions, such as:</p>
+<ul class="simple">
+<li><p>Do men talk more often about swords, guns, weapons?</p></li>
+<li><p>Do women talk more often about love, roses, children?</p></li>
+</ul>
+<p>For this we need to import the natural language toolkit <code class="docutils literal notranslate"><span class="pre">nltk</span></code> (<a class="reference external" href="https://www.nltk.org/">https://www.nltk.org/</a>) or any other NLP library, e.g. spaCy to tokenize the spoken text. We can then calculate the frequencies by character and sum them up by gender. For counting the selected words, we can use the library <code class="docutils literal notranslate"><span class="pre">collections</span></code> (<a class="reference external" href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save keyword for a character&#39;s text in a variable</span>
+<span class="n">TEXT_KEY</span> <span class="o">=</span> <span class="s2">&quot;text&quot;</span>
+<span class="c1"># save new column names in variables</span>
+<span class="n">ANNO_KEY</span> <span class="o">=</span> <span class="s2">&quot;text annotation&quot;</span>
+<span class="n">FRQ_KEY</span> <span class="o">=</span> <span class="s2">&quot;frequencies&quot;</span>
+
+<span class="c1"># tokenize and count words</span>
+<span class="c1"># iterate characters</span>
+<span class="k">for</span> <span class="n">character_entry</span> <span class="ow">in</span> <span class="n">play_spec</span><span class="p">:</span>
+    <span class="c1"># tokenize speech acts</span>
+    <span class="n">annotation</span> <span class="o">=</span>  <span class="p">[</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sen</span><span class="p">)</span> <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">character_entry</span><span class="p">[</span><span class="n">TEXT_KEY</span><span class="p">]]</span>
+    <span class="c1"># save tokenized text and word frequencies</span>
+    <span class="n">character_entry</span><span class="p">[</span><span class="n">ANNO_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">annotation</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">]</span>
+    <span class="n">character_entry</span><span class="p">[</span><span class="n">FRQ_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">character_entry</span><span class="p">[</span><span class="n">ANNO_KEY</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-word-list">
+<h3>Create word list<a class="headerlink" href="#create-word-list" title="Link to this heading">#</a></h3>
+<p>Create your list of words below. Each word must be placed in between strings (“word”) and separated with a comma from the next word.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rose&quot;</span><span class="p">,</span> <span class="s2">&quot;blom&quot;</span><span class="p">,</span> <span class="s2">&quot;barn&quot;</span><span class="p">,</span> <span class="s2">&quot;vapen&quot;</span><span class="p">,</span> <span class="s2">&quot;gevär&quot;</span><span class="p">,</span> <span class="s2">&quot;pengar&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analyze">
+<h3>Analyze<a class="headerlink" href="#analyze" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save character name key in a variable</span>
+<span class="n">NAME_KEY</span> <span class="o">=</span> <span class="s2">&quot;label&quot;</span>
+
+<span class="c1"># get frequencies of the words in the word list by character</span>
+<span class="c1"># iterate characters</span>
+<span class="k">for</span> <span class="n">character_entry</span> <span class="ow">in</span> <span class="n">play_spec</span><span class="p">:</span>
+    <span class="c1"># get character name</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character_entry</span><span class="p">[</span><span class="n">NAME_KEY</span><span class="p">])</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1"># for each word in the word list, look up the frequency in the speech of the current character</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">character_entry</span><span class="p">[</span><span class="n">FRQ_KEY</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">character_entry</span><span class="p">[</span><span class="n">FRQ_KEY</span><span class="p">][</span><span class="n">word</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;None of the words found in the speech of this character.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Helvig
+barn: 2
+--------------------------------------------------
+Nils
+barn: 3
+--------------------------------------------------
+Olof
+None of the words found in the speech of this character.
+--------------------------------------------------
+Cecilia
+None of the words found in the speech of this character.
+--------------------------------------------------
+Jurgen
+None of the words found in the speech of this character.
+--------------------------------------------------
+Jacques
+barn: 3
+--------------------------------------------------
+Gerhard
+None of the words found in the speech of this character.
+--------------------------------------------------
+Hans
+None of the words found in the speech of this character.
+--------------------------------------------------
+Sten
+blom: 1
+barn: 1
+--------------------------------------------------
+Claus
+barn: 1
+pengar: 1
+--------------------------------------------------
+Martin
+None of the words found in the speech of this character.
+--------------------------------------------------
+Margaretha
+barn: 7
+--------------------------------------------------
+1:ste BORGAREN
+None of the words found in the speech of this character.
+--------------------------------------------------
+2:dre BORGAREN
+None of the words found in the speech of this character.
+--------------------------------------------------
+Tre Borgare
+None of the words found in the speech of this character.
+--------------------------------------------------
+3:dje BORGAREN
+None of the words found in the speech of this character.
+--------------------------------------------------
+Gesäller
+None of the words found in the speech of this character.
+--------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the gender key for the characters in a variable</span>
+<span class="n">GENDER_KEY</span> <span class="o">=</span> <span class="s2">&quot;gender&quot;</span>
+<span class="c1"># create results dictionary</span>
+<span class="c1"># for each word the frequency by gender is saved </span>
+<span class="n">words_by_gender</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MALE&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;FEMALE&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;UNKNOWN&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">}</span>
+
+<span class="c1"># get frequencies of the words in the word list by character</span>
+<span class="c1"># add frequency to the gender of the character</span>
+
+<span class="c1"># iterate characters</span>
+<span class="k">for</span> <span class="n">character_entry</span> <span class="ow">in</span> <span class="n">play_spec</span><span class="p">:</span>
+    <span class="c1"># retrieve gender</span>
+    <span class="n">gender</span> <span class="o">=</span> <span class="n">character_entry</span><span class="p">[</span><span class="n">GENDER_KEY</span><span class="p">]</span>
+    <span class="c1"># for each word in the word list, look up the frequency in the speech of the current character</span>
+    <span class="c1"># add frequency to the gender of the character</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">character_entry</span><span class="p">[</span><span class="n">FRQ_KEY</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">words_by_gender</span><span class="p">[</span><span class="n">word</span><span class="p">]:</span>
+                <span class="n">words_by_gender</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">gender</span><span class="p">]</span> <span class="o">+=</span> <span class="n">character_entry</span><span class="p">[</span><span class="n">FRQ_KEY</span><span class="p">][</span><span class="n">word</span><span class="p">]</span>
+<span class="c1"># convert results dictionary into a DataFrame</span>
+<span class="n">gender_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">words_by_gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/bbfd1865ac0aa38e8ea5b5b463237005169b7e77da0f226bbf10c4a5ca5207c0.png" src="../../_images/bbfd1865ac0aa38e8ea5b5b463237005169b7e77da0f226bbf10c4a5ca5207c0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="generic-function-to-handle-the-requests-and-parse-the-result">
+<h2>Generic function to handle the requests and parse the result<a class="headerlink" href="#generic-function-to-handle-the-requests-and-parse-the-result" title="Link to this heading">#</a></h2>
+<p>Requesting data from the API in most cases follows a pattern:</p>
+<ul class="simple">
+<li><p>construct the request-url. E.g. use <code class="docutils literal notranslate"><span class="pre">https://dracor.org/api/</span></code> as a base and attach <code class="docutils literal notranslate"><span class="pre">corpusname</span></code>, <code class="docutils literal notranslate"><span class="pre">playname</span></code>, a method, e.g. <code class="docutils literal notranslate"><span class="pre">characters</span></code> and in some cases a reponse-format, e.g. <code class="docutils literal notranslate"><span class="pre">csv</span></code></p></li>
+<li><p>use this constructed url in a request do the endpoint</p></li>
+<li><p>retrieve the data and parse to a format, that can be than used in the program</p></li>
+</ul>
+<p>By defining a function, this process can be speed up. Instead of repeating the code, a function can be defined, that takes <code class="docutils literal notranslate"><span class="pre">corpusname</span></code>, <code class="docutils literal notranslate"><span class="pre">playname</span></code> and <code class="docutils literal notranslate"><span class="pre">method</span></code> as arguments. In the example we assume, that the response will be JSON.</p>
+<p>Parsing of JSON is done with the package <code class="docutils literal notranslate"><span class="pre">json</span></code> (<a class="reference external" href="https://docs.python.org/3/library/json.html">https://docs.python.org/3/library/json.html</a>), which needs to be imported:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function accepts parameters as arguments, e.g. <code class="docutils literal notranslate"><span class="pre">corpusname=&quot;ger&quot;</span></code>. Following arguments are supported:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">apibase</span></code> (default will be <code class="docutils literal notranslate"><span class="pre">https://dracor.org/api/</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">corpusname</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playname</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parse_json</span></code>: <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code> (default) – will parse the response as <code class="docutils literal notranslate"><span class="pre">json</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#corpusname:str -&gt; []</span>
+<span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1">#corpusname=corpusname</span>
+    <span class="c1">#playname=playname</span>
+    <span class="c1">#apibase=&quot;https://dracor.org/api/&quot;</span>
+    <span class="c1">#method=method</span>
+    <span class="c1">#parse_json: True</span>
+    
+    <span class="c1">#could set different apibase, e.g. https://staging.dracor.org/api/ [not recommended, pls use the production server]</span>
+    <span class="k">if</span> <span class="s2">&quot;apibase&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;apibase&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
+            <span class="n">apibase</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;apibase&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">apibase</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;apibase&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#use default</span>
+        <span class="n">apibase</span> <span class="o">=</span> <span class="s2">&quot;https://dracor.org/api/v1/&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;corpusname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="s2">&quot;playname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="c1"># used for /api/corpora/{corpusname}/play/{playname}/</span>
+        <span class="k">if</span> <span class="s2">&quot;method&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="s2">&quot;corpora/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;corpusname&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/plays/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;playname&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="s2">&quot;corpora/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;corpusname&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/plays/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;playname&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="s2">&quot;corpusname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="ow">not</span> <span class="s2">&quot;playname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;method&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="s2">&quot;corpora/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;corpusname&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="s2">&quot;corpora/&quot;</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;corpusname&quot;</span><span class="p">]</span> 
+    <span class="k">elif</span> <span class="s2">&quot;method&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="ow">not</span> <span class="s2">&quot;corpusname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="ow">not</span> <span class="s2">&quot;playname&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;method&quot;</span><span class="p">]</span>
+            
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="c1">#nothing set</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">request_url</span> <span class="o">=</span> <span class="n">apibase</span> <span class="o">+</span> <span class="s2">&quot;info&quot;</span>
+    
+    <span class="c1">#send the response</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="c1">#success!</span>
+        <span class="k">if</span> <span class="s2">&quot;parse_json&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;parse_json&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">json_data</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Request was not successful. Server returned status code: &quot;</span>  <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">))</span>
+       
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function can now be called as follows below. The function call requests the Info about the API <code class="docutils literal notranslate"><span class="pre">/api/info</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">,</span> <span class="n">parse_json</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;DraCor API v1&#39;,
+ &#39;version&#39;: &#39;1.0.2&#39;,
+ &#39;status&#39;: &#39;stable&#39;,
+ &#39;existdb&#39;: &#39;6.2.0&#39;,
+ &#39;base&#39;: &#39;https://dracor.org/api/v1&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>To request the metrics of a single play (<code class="docutils literal notranslate"><span class="pre">/api/corpora/{corpusname}/play/{playname}/metrics</span></code>) use the following function call:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get</span><span class="p">(</span><span class="n">corpusname</span><span class="o">=</span><span class="s2">&quot;ger&quot;</span><span class="p">,</span><span class="n">playname</span><span class="o">=</span><span class="s2">&quot;lessing-emilia-galotti&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;metrics&quot;</span><span class="p">,</span><span class="n">parse_json</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: &#39;ger000088&#39;,
+ &#39;name&#39;: &#39;lessing-emilia-galotti&#39;,
+ &#39;corpus&#39;: &#39;ger&#39;,
+ &#39;wikipediaLinkCount&#39;: 15,
+ &#39;nodes&#39;: [{&#39;betweenness&#39;: 0.012121212121212121,
+   &#39;degree&#39;: 4,
+   &#39;id&#39;: &#39;orsina&#39;,
+   &#39;closeness&#39;: 0.6,
+   &#39;eigenvector&#39;: 0.2619466686163178,
+   &#39;weightedDegree&#39;: 8},
+  {&#39;betweenness&#39;: 0.05505050505050505,
+   &#39;degree&#39;: 6,
+   &#39;id&#39;: &#39;odoardo&#39;,
+   &#39;closeness&#39;: 0.6666666666666666,
+   &#39;eigenvector&#39;: 0.3542503929627511,
+   &#39;weightedDegree&#39;: 15},
+  {&#39;betweenness&#39;: 0,
+   &#39;degree&#39;: 1,
+   &#39;id&#39;: &#39;der_kammerdiener&#39;,
+   &#39;closeness&#39;: 0.4444444444444444,
+   &#39;eigenvector&#39;: 0.05575792046031641,
+   &#39;weightedDegree&#39;: 2},
+  {&#39;betweenness&#39;: 0.05505050505050505,
+   &#39;degree&#39;: 6,
+   &#39;id&#39;: &#39;emilia&#39;,
+   &#39;closeness&#39;: 0.6666666666666666,
+   &#39;eigenvector&#39;: 0.3513647060457318,
+   &#39;weightedDegree&#39;: 13},
+  {&#39;betweenness&#39;: 0.003787878787878788,
+   &#39;degree&#39;: 4,
+   &#39;id&#39;: &#39;appiani&#39;,
+   &#39;closeness&#39;: 0.5217391304347826,
+   &#39;eigenvector&#39;: 0.2529584931569895,
+   &#39;weightedDegree&#39;: 8},
+  {&#39;betweenness&#39;: 0,
+   &#39;degree&#39;: 1,
+   &#39;id&#39;: &#39;conti&#39;,
+   &#39;closeness&#39;: 0.4444444444444444,
+   &#39;eigenvector&#39;: 0.05575792046031641,
+   &#39;weightedDegree&#39;: 2},
+  {&#39;betweenness&#39;: 0.04545454545454544,
+   &#39;degree&#39;: 7,
+   &#39;id&#39;: &#39;claudia&#39;,
+   &#39;closeness&#39;: 0.6,
+   &#39;eigenvector&#39;: 0.38292603187412266,
+   &#39;weightedDegree&#39;: 19},
+  {&#39;betweenness&#39;: 0.026515151515151516,
+   &#39;degree&#39;: 5,
+   &#39;id&#39;: &#39;pirro&#39;,
+   &#39;closeness&#39;: 0.5454545454545454,
+   &#39;eigenvector&#39;: 0.2719436343371554,
+   &#39;weightedDegree&#39;: 7},
+  {&#39;betweenness&#39;: 0,
+   &#39;degree&#39;: 2,
+   &#39;id&#39;: &#39;angelo&#39;,
+   &#39;closeness&#39;: 0.48,
+   &#39;eigenvector&#39;: 0.1253177208861109,
+   &#39;weightedDegree&#39;: 2},
+  {&#39;betweenness&#39;: 0.46717171717171724,
+   &#39;degree&#39;: 8,
+   &#39;id&#39;: &#39;der_prinz&#39;,
+   &#39;closeness&#39;: 0.75,
+   &#39;eigenvector&#39;: 0.32076106311648156,
+   &#39;weightedDegree&#39;: 20},
+  {&#39;betweenness&#39;: 0.24696969696969698,
+   &#39;degree&#39;: 9,
+   &#39;id&#39;: &#39;marinelli&#39;,
+   &#39;closeness&#39;: 0.8,
+   &#39;eigenvector&#39;: 0.4489846359321899,
+   &#39;weightedDegree&#39;: 30},
+  {&#39;betweenness&#39;: 0.012121212121212121,
+   &#39;degree&#39;: 4,
+   &#39;id&#39;: &#39;battista&#39;,
+   &#39;closeness&#39;: 0.6,
+   &#39;eigenvector&#39;: 0.26144507771860326,
+   &#39;weightedDegree&#39;: 7},
+  {&#39;betweenness&#39;: 0,
+   &#39;degree&#39;: 1,
+   &#39;id&#39;: &#39;camillo_rota&#39;,
+   &#39;closeness&#39;: 0.4444444444444444,
+   &#39;eigenvector&#39;: 0.05575792046031641,
+   &#39;weightedDegree&#39;: 1}],
+ &#39;averageDegree&#39;: 4.461538461538462,
+ &#39;density&#39;: 0.3717948717948718,
+ &#39;averageClustering&#39;: 0.5174603174603174,
+ &#39;maxDegreeIds&#39;: [&#39;marinelli&#39;],
+ &#39;size&#39;: 13,
+ &#39;maxDegree&#39;: 9,
+ &#39;numConnectedComponents&#39;: 1,
+ &#39;numEdges&#39;: 29,
+ &#39;diameter&#39;: 3,
+ &#39;averagePathLength&#39;: 1.7820512820512822}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-gender-of-characters">
+<h2>Example: Gender of Characters<a class="headerlink" href="#example-gender-of-characters" title="Link to this heading">#</a></h2>
+<p>In the following example we count characters that are tagged as “MALE” and “FEMALE in a corpus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Get all plays in a Corpus</span>
+<span class="k">if</span> <span class="n">corpusname</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="c1">#get data of a single corpus and store only the list of plays in the variable &quot;plays&quot;</span>
+    <span class="n">plays</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">corpusname</span><span class="o">=</span><span class="n">corpusname</span><span class="p">,</span><span class="n">parse_json</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s2">&quot;plays&quot;</span><span class="p">]</span>
+    <span class="c1">#set counters for male an female characters in the corpus</span>
+    <span class="n">overallMale</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">overallFemale</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#check, if a corpusname was entered</span>
+    <span class="k">if</span> <span class="n">corpusname</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="c1">#iterate over the plays</span>
+        <span class="k">for</span> <span class="n">play</span> <span class="ow">in</span> <span class="n">plays</span><span class="p">:</span>
+            <span class="c1">#get the characters of a play by using the api endpoint /api/corpora/{corpusname}/play/{playname}/characters</span>
+            <span class="n">characters</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">corpusname</span><span class="o">=</span><span class="n">corpusname</span><span class="p">,</span><span class="n">playname</span><span class="o">=</span><span class="n">play</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;characters&quot;</span><span class="p">,</span><span class="n">parse_json</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="c1">#reset the counters for male and female characters</span>
+            <span class="n">cntMale</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">cntFemale</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="c1">#iterate over the characters and increment the counters</span>
+            <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">characters</span><span class="p">:</span>
+                <span class="n">gender</span> <span class="o">=</span> <span class="n">character</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;MALE&quot;</span><span class="p">:</span>
+                    <span class="n">cntMale</span> <span class="o">=</span> <span class="n">cntMale</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;FEMALE&quot;</span><span class="p">:</span>
+                    <span class="n">cntFemale</span> <span class="o">=</span> <span class="n">cntFemale</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="c1"># report the result per play</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">play</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="s2">&quot;female characters: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cntFemale</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;; male characters: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cntMale</span><span class="p">))</span>
+        
+            <span class="c1"># increment the overall counters</span>
+            <span class="n">overallMale</span> <span class="o">=</span> <span class="n">overallMale</span> <span class="o">+</span> <span class="n">cntMale</span>
+            <span class="n">overallFemale</span> <span class="o">=</span> <span class="n">overallFemale</span> <span class="o">+</span> <span class="n">cntFemale</span>
+    <span class="c1"># report the results on corpus level</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">overallFemale</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; female and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">overallMale</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; male characters in the corpus &#39;&quot;</span> <span class="o">+</span> <span class="n">corpusname</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Please enter a corpus!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-hvarfor: female characters: 3; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-ingrid-en-dods-karlekssaga: female characters: 4; male characters: 6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-domd: female characters: 8; male characters: 7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-en-hufvudsak: female characters: 3; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-en-lektion: female characters: 1; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-ensam: female characters: 3; male characters: 4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agrell-smastadslif: female characters: 9; male characters: 9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aurelius-farmors-fodelsedag: female characters: 7; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>barthelson-efterspel: female characters: 4; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>benedictsson-final: female characters: 6; male characters: 7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>benedictsson-itelefon: female characters: 5; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>benedictsson-romeos-julia: female characters: 1; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bremer-konstnarns-fortviflan: female characters: 1; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>geijerstam-lars-anders-och-jan-anders-och-deras-barn: female characters: 4; male characters: 8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hedberg-rospiggarna: female characters: 11; male characters: 24
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>indebetou-pa-fotvandring: female characters: 4; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>indebetou-idet-grona: female characters: 6; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>indebetou-ifruntimmersveckan: female characters: 4; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kullgren-karlek: female characters: 5; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kuylenstierna-nar-nyar-kom: female characters: 3; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kuylenstierna-nu-ar-det-jul-igen: female characters: 2; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-sanna-kvinnor: female characters: 4; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-moster-malvina: female characters: 8; male characters: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-den-karleken: female characters: 4; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-elfvan: female characters: 10; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-familjelycka: female characters: 7; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-hur-man-gor-godt: female characters: 19; male characters: 16
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-skadespelerskan: female characters: 5; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>leffler-under-toffeln: female characters: 3; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lindhe-modrar: female characters: 7; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lundberg-forlat-mig: female characters: 1; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>malling-fru-leonora: female characters: 5; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>marholm-otteringning: female characters: 2; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>meyerson-den-nya-klassen: female characters: 5; male characters: 9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>meyerson-ett-pojkstreck: female characters: 3; male characters: 4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>molander-varflod: female characters: 5; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-kamraterna: female characters: 5; male characters: 6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-hostslask: female characters: 0; male characters: 7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-till-damaskus: female characters: 15; male characters: 23
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-master-olof: female characters: 6; male characters: 26
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-lycko-pers-resa: female characters: 7; male characters: 31
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-froken-julie: female characters: 2; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-forsta-varningen: female characters: 4; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-fordringsegare: female characters: 1; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-anno-fyrtiatta: female characters: 5; male characters: 15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-bandet: female characters: 3; male characters: 20
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-den-starkare: female characters: 3; male characters: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-fadren: female characters: 4; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-gillets-hemlighet: female characters: 3; male characters: 12
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-herr-bengts-hustru: female characters: 9; male characters: 6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-infor-doden: female characters: 3; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-marodorer: female characters: 6; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-paria: female characters: 0; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-moderskarlek: female characters: 4; male characters: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>strindberg-samum: female characters: 1; male characters: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-t-isma-maffarnas-land: female characters: 1; male characters: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-t-jeppe-och-murra: female characters: 1; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-skogskonungen: female characters: 4; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-lucias-ziffror: female characters: 10; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-askungen: female characters: 8; male characters: 4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-jennys-formaningar: female characters: 1; male characters: 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-krypskyttarne: female characters: 0; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-perdita: female characters: 2; male characters: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-snurran: female characters: 9; male characters: 11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-station-sylvester: female characters: 11; male characters: 11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>topelius-z-tidernas-spegel: female characters: 5; male characters: 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wahlenberg-pa-vakt: female characters: 3; male characters: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wahlenberg-tva-valsprak: female characters: 7; male characters: 4
+
+
+There are 325 female and 381 male characters in the corpus &#39;swe&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5.2 Programmable Corpora &amp; Network Analysis. Advanced</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5-2-2_catch-a-protagonist-in-dracor.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em>To catch a protagonist</em> in DraCor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">0. Import libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-api-calls-without-selected-parameters">1. Basic API calls without selected parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info-info-about-the-api"><code class="docutils literal notranslate"><span class="pre">/info</span></code>: Info about the API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpora-list-available-corpora"><code class="docutils literal notranslate"><span class="pre">corpora/</span></code>: List available corpora</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#include-corpora-metrics">Include corpora metrics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-calls-with-selected-parameters">2. API calls with selected parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-a-corpusname">1. Choose a  <code class="docutils literal notranslate"><span class="pre">corpusname/</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-metadata">Inspect metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-do-with-the-metadata-examples">3. What to do with the metadata - Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#play-select-text">3.  <code class="docutils literal notranslate"><span class="pre">play/</span></code>: Select text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-single-play-requests">Specify single play requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-word-list">Create word list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze">Analyze</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-function-to-handle-the-requests-and-parse-the-result">Generic function to handle the requests and parse the result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gender-of-characters">Example: Gender of Characters</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The DraCor Collective
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

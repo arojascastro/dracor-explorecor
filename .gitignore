@@ -4,5 +4,4 @@ notebooks/.ipynb_checkpoints/*
 notebooks/*/.ipynb_checkpoints/
 notebooks/*/*/.ipynb_checkpoints/
 notebooks/.Trash-0/
-notebooks/_build/
 notebooks/_build.zip

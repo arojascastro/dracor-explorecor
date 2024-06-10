@@ -1,0 +1,2251 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>To catch a protagonist in DraCor &#8212; CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-2_catch-a-protagonist-in-dracor';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Reproducibility in CLS Research" href="../../6_Reproducibility/README.html" />
+    <link rel="prev" title="DraCor API Tutorial" href="5-2-1_api-tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="CLS INFRA Training School ExploreCor – Using Programmable Corpora in Computational Literary Studies - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    CLS INFRA Training School: ExploreCor: Using Programmable Corpora in Computational Literary Studies
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1_Introduction/README.html">1. Introduction to Programmable Corpora</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1_Introduction/1-3_DraCor_Showcase.html">1.3 Using DraCor: Four Showcases</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_Corpora_in_Research/README.html">2. Corpora in CLS Research. User Perspectives</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../README.html">5. Exploring Programmable Corpora (Focus: Network Analysis)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../5-1_Exploring_Programmable_Corpora_Beginners/README.html">5.1 Programmable Corpora &amp; Network Analysis. Beginners</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">5.2 Programmable Corpora &amp; Network Analysis. Advanced</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="5-2-1_api-tutorial.html">DraCor API Tutorial</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><em>To catch a protagonist</em> in DraCor</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../6_Reproducibility/README.html">6. Reproducibility in CLS Research</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../6_Reproducibility/6-2_custom_local_dracor.html">6.2 Setting up a custom DraCor infrastructure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_Open_Topics/README.html">7. Open Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ingoboerner/dracor-explorecor" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ingoboerner/dracor-explorecor/issues/new?title=Issue%20on%20page%20%2F5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-2_catch-a-protagonist-in-dracor.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-2_catch-a-protagonist-in-dracor.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>To catch a protagonist in DraCor</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-get-the-basic-measures">Step 1. Get the basic measures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-and-count-based-metrics-via-dracor-api">Network and count-based metrics via Dracor API</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-get-the-metrics-and-construct-a-pandas-data-frame">Preparation: Get the metrics and construct a pandas data frame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-the-ranks">Step 2. Calculate the ranks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-rank-on-average-and-standard-deviation-of-the-individual-rankings">Step 3. Rank on average and standard deviation of the individual rankings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-step-create-rankings-and-combined-rankings-of-network-based-and-count-based-metrics-separately">Additional Step: Create Rankings and combined rankings of network-based and count-based metrics separately</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="to-catch-a-protagonist-in-dracor">
+<h1><em>To catch a protagonist</em> in DraCor<a class="headerlink" href="#to-catch-a-protagonist-in-dracor" title="Link to this heading">#</a></h1>
+<p>In the paper <a class="reference external" href="https://dh2018.adho.org/to-catch-a-protagonist-quantitative-dominance-relations-in-german-language-drama-1730-1930"><em>To Catch a Protagonist: Quantitative Domninance Relations in German-Language Drama (1730-1930)</em></a> (<span id="id1">Fischer <em>et al.</em> [<a class="reference internal" href="../../bibliography.html#id2" title="Frank Fischer, Peer Trilcke, Christopher Kittel, Carsten Milling, and Daniil Skorinkin. To Catch a Protagonist: Quantitative Dominance Relations in German-Language Drama (1730–1930). In DH2018: »Puentes/Bridges«. 26–29 June 2018. Book of Abstracts / Libro de resúmenes. Mexico, 2018. Red de Humanidades Digitales A. C. URL: https://dh2018.adho.org/to-catch-a-protagonist-quantitative-dominance-relations-in-german-language-drama-1730-1930/.">2018</a>]</span>) an algorithm is described, that allows to identify characters that are the quantitatively dominant characters of a play based on a set of network-based and count based measures:</p>
+<blockquote>
+<div><p>In order to systematically describe the extent of this deviation, we calculate eight values for each character of the 465 dramas of our corpus, three count-based measures (number of scenes a character appears in, number of speech acts, number of spoken words) and five network-related measures (degree, weighted degree, betweenness centrality, closeness centrality, eigenvector centrality). For each measurement a ranking is created. The rankings are then merged into two meta-rankings: one count-based and one network-based. The two meta-rankings are then combined into an overall ranking.</p>
+</div></blockquote>
+<p>The original algorithm was implemented in the tool <a class="reference external" href="https://github.com/lehkost/dramavis">Dramavis</a> by Christopher Kittel. <em>Dramavis</em> operates on XML <a class="reference external" href="https://dlina.github.io/Introducing-Our-Zwischenformat">“zwischenformat”</a> files (cf. <span id="id2">[<a class="reference internal" href="../../bibliography.html#id11" title="Dario Kampkaspar, Frank Fischer, and Peer Trilcke. Introducing our 'Zwischenformat'. June 2015. URL: https://dlina.github.io/Introducing-Our-Zwischenformat.">Kampkaspar <em>et al.</em>, 2015</a>]</span>) created in the <a class="reference external" href="https://dlina.github.io">DLINA</a> project.</p>
+<p>The following notebook<a class="footnote-reference brackets" href="#catch-protagonist-notebook-source" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> adapts the code of the respective modules to work with data returned by the <a class="reference external" href="https://dracor.org/doc/api">DraCor API</a>. The aim is to be able to recreate the <code class="docutils literal notranslate"><span class="pre">*_chars.csv</span></code>-files that were used in the study. The data can be found in the <a class="reference external" href="https://github.com/dlina/catch-protagonist">repository</a> on GitHub in the folder <a class="reference external" href="https://github.com/dlina/catch-protagonist/tree/main/data/allmetrics"><code class="docutils literal notranslate"><span class="pre">allmetrics</span></code></a>.</p>
+<p>The implementation will be tested with the play <em>Emilia Galotti</em>. The original algorithm operated on the corresponding <a class="reference external" href="https://dlina.github.io/linas/88">LINA</a> and produced the file <a class="reference external" href="https://github.com/dlina/catch-protagonist/blob/main/data/allmetrics/88_Emilia%20Galotti_chars.csv"><code class="docutils literal notranslate"><span class="pre">88_Emilia</span> <span class="pre">Galotti_chars.csv</span></code></a> as output In DraCor the play can be accessed <a class="reference external" href="https://dracor.org/ger/lessing-emilia-galotti">here</a>.</p>
+<section id="step-1-get-the-basic-measures">
+<h2>Step 1. Get the basic measures<a class="headerlink" href="#step-1-get-the-basic-measures" title="Link to this heading">#</a></h2>
+<p>We need to get the following basic measures on characters:</p>
+<p><strong>Network measures</strong></p>
+<ul class="simple">
+<li><p>betweenness</p></li>
+<li><p>degree</p></li>
+<li><p>closeness</p></li>
+<li><p>~~closeness corrected~~</p></li>
+<li><p>weighted degree</p></li>
+<li><p>eigenvector centrality</p></li>
+</ul>
+<p><strong>count-based measures</strong></p>
+<ul class="simple">
+<li><p>frequency/appearances</p></li>
+<li><p>number of <em>speech acts</em></p></li>
+<li><p>number of <em>words</em></p></li>
+</ul>
+<section id="network-and-count-based-metrics-via-dracor-api">
+<h3>Network and count-based metrics via Dracor API<a class="headerlink" href="#network-and-count-based-metrics-via-dracor-api" title="Link to this heading">#</a></h3>
+<p>The Python-Packages <a class="reference external" href="https://docs.python-requests.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a> and the library <a class="reference external" href="https://docs.python.org/3/library/json.html#module-json"><code class="docutils literal notranslate"><span class="pre">json</span></code></a> will be used to query the API and parse the response:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if not installed, uncomment the following line and run the cell:</span>
+<span class="c1"># !pip install requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set corpus and playname</span>
+<span class="n">corpusname</span> <span class="o">=</span> <span class="s2">&quot;ger&quot;</span>
+<span class="n">playname</span> <span class="o">=</span> <span class="s2">&quot;lessing-emilia-galotti&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># base url of the DraCor-API</span>
+<span class="n">api_base</span> <span class="o">=</span> <span class="s2">&quot;https://dracor.org/api/v1/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To retrieve the network-data and speech-amounts data on single characters the function <code class="docutils literal notranslate"><span class="pre">/corpora/{corpusname}/plays/{playname}/characters</span></code> is used as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># send a request to the endpoint and parse results</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="n">api_base</span> <span class="o">+</span> <span class="s2">&quot;corpora/&quot;</span> <span class="o">+</span> <span class="n">corpusname</span> <span class="o">+</span> <span class="s2">&quot;/plays/&quot;</span> <span class="o">+</span> <span class="n">playname</span> <span class="o">+</span> <span class="s2">&quot;/characters&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+<span class="n">character_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://dracor.org/api/v1/corpora/ger/plays/lessing-emilia-galotti/characters
+</pre></div>
+</div>
+</div>
+</div>
+<p>The API function returns data on the characters, including the network and count-based metrics:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">character_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;id&#39;: &#39;der_prinz&#39;,
+  &#39;name&#39;: &#39;Der Prinz&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 17,
+  &#39;numOfSpeechActs&#39;: 157,
+  &#39;numOfWords&#39;: 4002,
+  &#39;degree&#39;: 8,
+  &#39;weightedDegree&#39;: 20,
+  &#39;closeness&#39;: 0.75,
+  &#39;betweenness&#39;: 0.46717171717171724,
+  &#39;eigenvector&#39;: 0.32076106311648156},
+ {&#39;id&#39;: &#39;der_kammerdiener&#39;,
+  &#39;name&#39;: &#39;Der Kammerdiener&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 2,
+  &#39;numOfSpeechActs&#39;: 6,
+  &#39;numOfWords&#39;: 33,
+  &#39;degree&#39;: 1,
+  &#39;weightedDegree&#39;: 2,
+  &#39;closeness&#39;: 0.4444444444444444,
+  &#39;betweenness&#39;: 0,
+  &#39;eigenvector&#39;: 0.05575792046031641},
+ {&#39;id&#39;: &#39;conti&#39;,
+  &#39;name&#39;: &#39;Conti&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 2,
+  &#39;numOfSpeechActs&#39;: 24,
+  &#39;numOfWords&#39;: 604,
+  &#39;degree&#39;: 1,
+  &#39;weightedDegree&#39;: 2,
+  &#39;closeness&#39;: 0.4444444444444444,
+  &#39;betweenness&#39;: 0,
+  &#39;eigenvector&#39;: 0.05575792046031641},
+ {&#39;id&#39;: &#39;marinelli&#39;,
+  &#39;name&#39;: &#39;Marinelli&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 19,
+  &#39;numOfSpeechActs&#39;: 221,
+  &#39;numOfWords&#39;: 4343,
+  &#39;degree&#39;: 9,
+  &#39;weightedDegree&#39;: 30,
+  &#39;closeness&#39;: 0.8,
+  &#39;betweenness&#39;: 0.24696969696969698,
+  &#39;eigenvector&#39;: 0.4489846359321899},
+ {&#39;id&#39;: &#39;camillo_rota&#39;,
+  &#39;name&#39;: &#39;Camillo Rota&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 1,
+  &#39;numOfSpeechActs&#39;: 6,
+  &#39;numOfWords&#39;: 78,
+  &#39;degree&#39;: 1,
+  &#39;weightedDegree&#39;: 1,
+  &#39;closeness&#39;: 0.4444444444444444,
+  &#39;betweenness&#39;: 0,
+  &#39;eigenvector&#39;: 0.05575792046031641},
+ {&#39;id&#39;: &#39;claudia&#39;,
+  &#39;name&#39;: &#39;Claudia&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;FEMALE&#39;,
+  &#39;numOfScenes&#39;: 13,
+  &#39;numOfSpeechActs&#39;: 73,
+  &#39;numOfWords&#39;: 1581,
+  &#39;degree&#39;: 7,
+  &#39;weightedDegree&#39;: 19,
+  &#39;closeness&#39;: 0.6,
+  &#39;betweenness&#39;: 0.04545454545454544,
+  &#39;eigenvector&#39;: 0.38292603187412266},
+ {&#39;id&#39;: &#39;pirro&#39;,
+  &#39;name&#39;: &#39;Pirro&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 4,
+  &#39;numOfSpeechActs&#39;: 25,
+  &#39;numOfWords&#39;: 263,
+  &#39;degree&#39;: 5,
+  &#39;weightedDegree&#39;: 7,
+  &#39;closeness&#39;: 0.5454545454545454,
+  &#39;betweenness&#39;: 0.026515151515151516,
+  &#39;eigenvector&#39;: 0.2719436343371554},
+ {&#39;id&#39;: &#39;odoardo&#39;,
+  &#39;name&#39;: &#39;Odoardo&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 12,
+  &#39;numOfSpeechActs&#39;: 108,
+  &#39;numOfWords&#39;: 2441,
+  &#39;degree&#39;: 6,
+  &#39;weightedDegree&#39;: 15,
+  &#39;closeness&#39;: 0.6666666666666666,
+  &#39;betweenness&#39;: 0.05505050505050505,
+  &#39;eigenvector&#39;: 0.3542503929627511},
+ {&#39;id&#39;: &#39;angelo&#39;,
+  &#39;name&#39;: &#39;Angelo&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 2,
+  &#39;numOfSpeechActs&#39;: 28,
+  &#39;numOfWords&#39;: 487,
+  &#39;degree&#39;: 2,
+  &#39;weightedDegree&#39;: 2,
+  &#39;closeness&#39;: 0.48,
+  &#39;betweenness&#39;: 0,
+  &#39;eigenvector&#39;: 0.1253177208861109},
+ {&#39;id&#39;: &#39;emilia&#39;,
+  &#39;name&#39;: &#39;Emilia&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;FEMALE&#39;,
+  &#39;numOfScenes&#39;: 7,
+  &#39;numOfSpeechActs&#39;: 64,
+  &#39;numOfWords&#39;: 1702,
+  &#39;degree&#39;: 6,
+  &#39;weightedDegree&#39;: 13,
+  &#39;closeness&#39;: 0.6666666666666666,
+  &#39;betweenness&#39;: 0.05505050505050505,
+  &#39;eigenvector&#39;: 0.3513647060457318},
+ {&#39;id&#39;: &#39;appiani&#39;,
+  &#39;name&#39;: &#39;Appiani&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 5,
+  &#39;numOfSpeechActs&#39;: 48,
+  &#39;numOfWords&#39;: 852,
+  &#39;degree&#39;: 4,
+  &#39;weightedDegree&#39;: 8,
+  &#39;closeness&#39;: 0.5217391304347826,
+  &#39;betweenness&#39;: 0.003787878787878788,
+  &#39;eigenvector&#39;: 0.2529584931569895},
+ {&#39;id&#39;: &#39;battista&#39;,
+  &#39;name&#39;: &#39;Battista&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;MALE&#39;,
+  &#39;numOfScenes&#39;: 4,
+  &#39;numOfSpeechActs&#39;: 11,
+  &#39;numOfWords&#39;: 152,
+  &#39;degree&#39;: 4,
+  &#39;weightedDegree&#39;: 7,
+  &#39;closeness&#39;: 0.6,
+  &#39;betweenness&#39;: 0.012121212121212121,
+  &#39;eigenvector&#39;: 0.26144507771860326},
+ {&#39;id&#39;: &#39;orsina&#39;,
+  &#39;name&#39;: &#39;Orsina&#39;,
+  &#39;isGroup&#39;: False,
+  &#39;gender&#39;: &#39;FEMALE&#39;,
+  &#39;numOfScenes&#39;: 6,
+  &#39;numOfSpeechActs&#39;: 64,
+  &#39;numOfWords&#39;: 2111,
+  &#39;degree&#39;: 4,
+  &#39;weightedDegree&#39;: 8,
+  &#39;closeness&#39;: 0.6,
+  &#39;betweenness&#39;: 0.012121212121212121,
+  &#39;eigenvector&#39;: 0.2619466686163178}]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data on the characters are in a dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;betweenness&#39;</span><span class="p">:</span> <span class="mf">0.24696969696969698</span><span class="p">,</span>
+  <span class="s1">&#39;closeness&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+  <span class="s1">&#39;degree&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s1">&#39;eigenvector&#39;</span><span class="p">:</span> <span class="mf">0.44898463593218985</span><span class="p">,</span>
+  <span class="s1">&#39;gender&#39;</span><span class="p">:</span> <span class="s1">&#39;MALE&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;marinelli&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;isGroup&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+  <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Marinelli&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;numOfScenes&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="s1">&#39;numOfSpeechActs&#39;</span><span class="p">:</span> <span class="mi">221</span><span class="p">,</span>
+  <span class="s1">&#39;numOfWords&#39;</span><span class="p">:</span> <span class="mi">4343</span><span class="p">,</span>
+  <span class="s1">&#39;weightedDegree&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>We don’t know anything about the network metrics of the whole play, though. If we want to retrieve this information, we would have to use the API function <code class="docutils literal notranslate"><span class="pre">/corpora/{corpusname}/plays/{playname}/metrics</span></code>, which would also tell us, if there are several sub-networks in a dictionary-field with the key <code class="docutils literal notranslate"><span class="pre">numConnectedComponents</span></code>. This could be relevant, because we can also calculate some network-metrics differently, e.g. the <em>closeness</em>.</p>
+</section>
+</section>
+<section id="preparation-get-the-metrics-and-construct-a-pandas-data-frame">
+<h2>Preparation: Get the metrics and construct a pandas data frame<a class="headerlink" href="#preparation-get-the-metrics-and-construct-a-pandas-data-frame" title="Link to this heading">#</a></h2>
+<p>In the Dramavis implementation an object of the class <code class="docutils literal notranslate"><span class="pre">DramaAnalyzer</span></code> is created, which contains the information on characters in a pandas data frame. We will create the same data structure to be able to use the same methods for calculating means and ranking.</p>
+<p>The rows in the <a class="reference external" href="https://raw.githubusercontent.com/dlina/catch-protagonist/main/data/allmetrics/88_Emilia%20Galotti_chars.csv">table</a> are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">name,betweenness,degree,closeness,closeness_corrected,strength,eigenvector_centrality,avg_distance,avg_distance_corrected,frequency,speech_acts,words,lines,chars</span> <span class="pre">...</span></code></p>
+<p>We will not include all rows, but only the ones, that are relevant for the rankings:</p>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code>,<code class="docutils literal notranslate"><span class="pre">betweenness</span></code>,<code class="docutils literal notranslate"><span class="pre">degree</span></code>,<code class="docutils literal notranslate"><span class="pre">closeness</span></code>,~~closeness_corrected~~,<code class="docutils literal notranslate"><span class="pre">strength</span></code>,<code class="docutils literal notranslate"><span class="pre">eigenvector_centrality</span></code>,~~avg_distance,avg_distance_corrected~~,<code class="docutils literal notranslate"><span class="pre">frequency</span></code>,<code class="docutils literal notranslate"><span class="pre">speech_acts</span></code>,<code class="docutils literal notranslate"><span class="pre">words</span></code>,~~lines,chars~~ …</p>
+<p>following rows will be called differently to follow DraCor conventions of the <a class="reference external" href="https://dracor.org/api/corpora/ger/plays/lessing-emilia-galotti/characters">API output</a>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> → <code class="docutils literal notranslate"><span class="pre">id</span></code>; later this will be used to construct URIs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strength</span></code> → <code class="docutils literal notranslate"><span class="pre">weightedDegree</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eigenvector_centrality</span></code> → <code class="docutils literal notranslate"><span class="pre">eigenvector</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> → <code class="docutils literal notranslate"><span class="pre">numOfScenes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">speech_acts</span></code> → <code class="docutils literal notranslate"><span class="pre">numOfSpeechActs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">words</span></code> → <code class="docutils literal notranslate"><span class="pre">numOfWords</span></code></p></li>
+</ul>
+<p>The package <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> is used to handle the data as a dataframe. Therefore we need to import the package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, we need to transform the parsed JSON API response to a list of lists, that is then turned into the data frame <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># columns</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="s2">&quot;betweenness&quot;</span><span class="p">,</span><span class="s2">&quot;degree&quot;</span><span class="p">,</span><span class="s2">&quot;closeness&quot;</span><span class="p">,</span><span class="s2">&quot;weightedDegree&quot;</span><span class="p">,</span><span class="s2">&quot;eigenvector&quot;</span><span class="p">,</span><span class="s2">&quot;numOfScenes&quot;</span><span class="p">,</span><span class="s2">&quot;numOfSpeechActs&quot;</span><span class="p">,</span><span class="s2">&quot;numOfWords&quot;</span><span class="p">]</span>
+
+<span class="c1"># prepare the data for the data frame</span>
+<span class="n">df_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">character_data</span><span class="p">:</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">character</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="n">df_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="c1"># construct the data frame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">cols</span><span class="p">)</span>
+
+<span class="c1">#turn the column &quot;id&quot; to the index</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="c1">#output</span>
+<span class="n">df</span>      
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>betweenness</th>
+      <th>degree</th>
+      <th>closeness</th>
+      <th>weightedDegree</th>
+      <th>eigenvector</th>
+      <th>numOfScenes</th>
+      <th>numOfSpeechActs</th>
+      <th>numOfWords</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>der_prinz</th>
+      <td>0.467172</td>
+      <td>8</td>
+      <td>0.750000</td>
+      <td>20</td>
+      <td>0.320761</td>
+      <td>17</td>
+      <td>157</td>
+      <td>4002</td>
+    </tr>
+    <tr>
+      <th>der_kammerdiener</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>6</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>conti</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>24</td>
+      <td>604</td>
+    </tr>
+    <tr>
+      <th>marinelli</th>
+      <td>0.246970</td>
+      <td>9</td>
+      <td>0.800000</td>
+      <td>30</td>
+      <td>0.448985</td>
+      <td>19</td>
+      <td>221</td>
+      <td>4343</td>
+    </tr>
+    <tr>
+      <th>camillo_rota</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>1</td>
+      <td>0.055758</td>
+      <td>1</td>
+      <td>6</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>claudia</th>
+      <td>0.045455</td>
+      <td>7</td>
+      <td>0.600000</td>
+      <td>19</td>
+      <td>0.382926</td>
+      <td>13</td>
+      <td>73</td>
+      <td>1581</td>
+    </tr>
+    <tr>
+      <th>pirro</th>
+      <td>0.026515</td>
+      <td>5</td>
+      <td>0.545455</td>
+      <td>7</td>
+      <td>0.271944</td>
+      <td>4</td>
+      <td>25</td>
+      <td>263</td>
+    </tr>
+    <tr>
+      <th>odoardo</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>15</td>
+      <td>0.354250</td>
+      <td>12</td>
+      <td>108</td>
+      <td>2441</td>
+    </tr>
+    <tr>
+      <th>angelo</th>
+      <td>0.000000</td>
+      <td>2</td>
+      <td>0.480000</td>
+      <td>2</td>
+      <td>0.125318</td>
+      <td>2</td>
+      <td>28</td>
+      <td>487</td>
+    </tr>
+    <tr>
+      <th>emilia</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>13</td>
+      <td>0.351365</td>
+      <td>7</td>
+      <td>64</td>
+      <td>1702</td>
+    </tr>
+    <tr>
+      <th>appiani</th>
+      <td>0.003788</td>
+      <td>4</td>
+      <td>0.521739</td>
+      <td>8</td>
+      <td>0.252958</td>
+      <td>5</td>
+      <td>48</td>
+      <td>852</td>
+    </tr>
+    <tr>
+      <th>battista</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>7</td>
+      <td>0.261445</td>
+      <td>4</td>
+      <td>11</td>
+      <td>152</td>
+    </tr>
+    <tr>
+      <th>orsina</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>8</td>
+      <td>0.261947</td>
+      <td>6</td>
+      <td>64</td>
+      <td>2111</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can now query the data, e.g. output the values of a single character by requesting a row by its index value, which is the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the values of a single character</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;marinelli&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>betweenness           0.246970
+degree                9.000000
+closeness             0.800000
+weightedDegree       30.000000
+eigenvector           0.448985
+numOfScenes          19.000000
+numOfSpeechActs     221.000000
+numOfWords         4343.000000
+Name: marinelli, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-calculate-the-ranks">
+<h2>Step 2. Calculate the ranks<a class="headerlink" href="#step-2-calculate-the-ranks" title="Link to this heading">#</a></h2>
+<p>In Dramavis the function <a class="reference external" href="https://github.com/lehkost/dramavis/blob/v0.4/dramalyzer.py#L282-L288"><code class="docutils literal notranslate"><span class="pre">get_character_ranks</span></code></a> creates the rankings of the count-based and network-based measures. We will adapt this function to operate on the created data frame and rename the columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metrics_to_rank</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;degree&#39;</span><span class="p">,</span> <span class="s1">&#39;closeness&#39;</span><span class="p">,</span> <span class="s1">&#39;betweenness&#39;</span><span class="p">,</span> <span class="s1">&#39;weightedDegree&#39;</span><span class="p">,</span> <span class="s1">&#39;eigenvector&#39;</span><span class="p">,</span> <span class="s1">&#39;numOfScenes&#39;</span><span class="p">,</span> <span class="s1">&#39;numOfSpeechActs&#39;</span><span class="p">,</span> <span class="s1">&#39;numOfWords&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics_to_rank</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s2">&quot;_rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>betweenness</th>
+      <th>degree</th>
+      <th>closeness</th>
+      <th>weightedDegree</th>
+      <th>eigenvector</th>
+      <th>numOfScenes</th>
+      <th>numOfSpeechActs</th>
+      <th>numOfWords</th>
+      <th>degree_rank</th>
+      <th>closeness_rank</th>
+      <th>betweenness_rank</th>
+      <th>weightedDegree_rank</th>
+      <th>eigenvector_rank</th>
+      <th>numOfScenes_rank</th>
+      <th>numOfSpeechActs_rank</th>
+      <th>numOfWords_rank</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>der_prinz</th>
+      <td>0.467172</td>
+      <td>8</td>
+      <td>0.750000</td>
+      <td>20</td>
+      <td>0.320761</td>
+      <td>17</td>
+      <td>157</td>
+      <td>4002</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>der_kammerdiener</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>6</td>
+      <td>33</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>12.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>conti</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>24</td>
+      <td>604</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>marinelli</th>
+      <td>0.246970</td>
+      <td>9</td>
+      <td>0.800000</td>
+      <td>30</td>
+      <td>0.448985</td>
+      <td>19</td>
+      <td>221</td>
+      <td>4343</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>camillo_rota</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>1</td>
+      <td>0.055758</td>
+      <td>1</td>
+      <td>6</td>
+      <td>78</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>11.0</td>
+      <td>13.0</td>
+      <td>12.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>claudia</th>
+      <td>0.045455</td>
+      <td>7</td>
+      <td>0.600000</td>
+      <td>19</td>
+      <td>0.382926</td>
+      <td>13</td>
+      <td>73</td>
+      <td>1581</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>pirro</th>
+      <td>0.026515</td>
+      <td>5</td>
+      <td>0.545455</td>
+      <td>7</td>
+      <td>0.271944</td>
+      <td>4</td>
+      <td>25</td>
+      <td>263</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>odoardo</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>15</td>
+      <td>0.354250</td>
+      <td>12</td>
+      <td>108</td>
+      <td>2441</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>angelo</th>
+      <td>0.000000</td>
+      <td>2</td>
+      <td>0.480000</td>
+      <td>2</td>
+      <td>0.125318</td>
+      <td>2</td>
+      <td>28</td>
+      <td>487</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>emilia</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>13</td>
+      <td>0.351365</td>
+      <td>7</td>
+      <td>64</td>
+      <td>1702</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>appiani</th>
+      <td>0.003788</td>
+      <td>4</td>
+      <td>0.521739</td>
+      <td>8</td>
+      <td>0.252958</td>
+      <td>5</td>
+      <td>48</td>
+      <td>852</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>battista</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>7</td>
+      <td>0.261445</td>
+      <td>4</td>
+      <td>11</td>
+      <td>152</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>11.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>orsina</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>8</td>
+      <td>0.261947</td>
+      <td>6</td>
+      <td>64</td>
+      <td>2111</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="step-3-rank-on-average-and-standard-deviation-of-the-individual-rankings">
+<h2>Step 3. Rank on average and standard deviation of the individual rankings<a class="headerlink" href="#step-3-rank-on-average-and-standard-deviation-of-the-individual-rankings" title="Link to this heading">#</a></h2>
+<p>In Dramavis the individual rankings are then used for the calculation of an average ranking and the standard deviation, which are then also ranked. This is done by the function <a class="reference external" href="https://github.com/lehkost/dramavis/blob/v0.4/dramalyzer.py#L305-L310"><code class="docutils literal notranslate"><span class="pre">get_centrality_ranks</span></code></a>.</p>
+<p>The following columns will be added to the data frame:</p>
+<ul class="simple">
+<li><p>(1) <code class="docutils literal notranslate"><span class="pre">centrality_rank_avg</span></code>: The average of all rankings</p></li>
+<li><p>(2) <code class="docutils literal notranslate"><span class="pre">centrality_rank_std</span></code>: Standard deviation of the rankings</p></li>
+<li><p>(3) <code class="docutils literal notranslate"><span class="pre">centrality_rank_avg_rank</span></code>: A ranking is created from the average of all rankings (1)</p></li>
+<li><p>(4) <code class="docutils literal notranslate"><span class="pre">centrality_rank_std_rank</span></code>: A ranking is created from the standard deviation of all rankings (2)</p></li>
+</ul>
+<p>The following dramavis code is adapted accordingly to operate on the dataframe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;rank&quot;</span><span class="p">)]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;centrality_rank_avg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">ranks</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;centrality_rank_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">ranks</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;centrality_rank_avg&#39;</span><span class="p">,</span> <span class="s1">&#39;centrality_rank_std&#39;</span><span class="p">]:</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s2">&quot;_rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>betweenness</th>
+      <th>degree</th>
+      <th>closeness</th>
+      <th>weightedDegree</th>
+      <th>eigenvector</th>
+      <th>numOfScenes</th>
+      <th>numOfSpeechActs</th>
+      <th>numOfWords</th>
+      <th>degree_rank</th>
+      <th>closeness_rank</th>
+      <th>betweenness_rank</th>
+      <th>weightedDegree_rank</th>
+      <th>eigenvector_rank</th>
+      <th>numOfScenes_rank</th>
+      <th>numOfSpeechActs_rank</th>
+      <th>numOfWords_rank</th>
+      <th>centrality_rank_avg</th>
+      <th>centrality_rank_std</th>
+      <th>centrality_rank_avg_rank</th>
+      <th>centrality_rank_std_rank</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>der_prinz</th>
+      <td>0.467172</td>
+      <td>8</td>
+      <td>0.750000</td>
+      <td>20</td>
+      <td>0.320761</td>
+      <td>17</td>
+      <td>157</td>
+      <td>4002</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.250</td>
+      <td>0.145621</td>
+      <td>2.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>der_kammerdiener</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>6</td>
+      <td>33</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>12.0</td>
+      <td>13.0</td>
+      <td>11.000</td>
+      <td>0.133631</td>
+      <td>12.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>conti</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>24</td>
+      <td>604</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>8.0</td>
+      <td>10.125</td>
+      <td>0.123879</td>
+      <td>11.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>marinelli</th>
+      <td>0.246970</td>
+      <td>9</td>
+      <td>0.800000</td>
+      <td>30</td>
+      <td>0.448985</td>
+      <td>19</td>
+      <td>221</td>
+      <td>4343</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.125</td>
+      <td>0.044194</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>camillo_rota</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>1</td>
+      <td>0.055758</td>
+      <td>1</td>
+      <td>6</td>
+      <td>78</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>11.0</td>
+      <td>13.0</td>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>11.625</td>
+      <td>0.132583</td>
+      <td>13.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>claudia</th>
+      <td>0.045455</td>
+      <td>7</td>
+      <td>0.600000</td>
+      <td>19</td>
+      <td>0.382926</td>
+      <td>13</td>
+      <td>73</td>
+      <td>1581</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>3.875</td>
+      <td>0.169525</td>
+      <td>4.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>pirro</th>
+      <td>0.026515</td>
+      <td>5</td>
+      <td>0.545455</td>
+      <td>7</td>
+      <td>0.271944</td>
+      <td>4</td>
+      <td>25</td>
+      <td>263</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>7.625</td>
+      <td>0.188243</td>
+      <td>7.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>odoardo</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>15</td>
+      <td>0.354250</td>
+      <td>12</td>
+      <td>108</td>
+      <td>2441</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.375</td>
+      <td>0.064694</td>
+      <td>3.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>angelo</th>
+      <td>0.000000</td>
+      <td>2</td>
+      <td>0.480000</td>
+      <td>2</td>
+      <td>0.125318</td>
+      <td>2</td>
+      <td>28</td>
+      <td>487</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>9.625</td>
+      <td>0.093003</td>
+      <td>10.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>emilia</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>13</td>
+      <td>0.351365</td>
+      <td>7</td>
+      <td>64</td>
+      <td>1702</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>4.250</td>
+      <td>0.110801</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>appiani</th>
+      <td>0.003788</td>
+      <td>4</td>
+      <td>0.521739</td>
+      <td>8</td>
+      <td>0.252958</td>
+      <td>5</td>
+      <td>48</td>
+      <td>852</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>7.625</td>
+      <td>0.148467</td>
+      <td>7.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>battista</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>7</td>
+      <td>0.261445</td>
+      <td>4</td>
+      <td>11</td>
+      <td>152</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>8.125</td>
+      <td>0.253876</td>
+      <td>9.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>orsina</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>8</td>
+      <td>0.261947</td>
+      <td>6</td>
+      <td>64</td>
+      <td>2111</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.875</td>
+      <td>0.140749</td>
+      <td>6.0</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Based on the calculation of <code class="docutils literal notranslate"><span class="pre">centrality_rank_avg_rank</span></code>, the “central” characters can be already queried as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;centrality_rank_avg_rank&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;marinelli&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="additional-step-create-rankings-and-combined-rankings-of-network-based-and-count-based-metrics-separately">
+<h2>Additional Step: Create Rankings and combined rankings of network-based and count-based metrics separately<a class="headerlink" href="#additional-step-create-rankings-and-combined-rankings-of-network-based-and-count-based-metrics-separately" title="Link to this heading">#</a></h2>
+<p>In addition to a ranking that combines all metrics and rankings derived thereof, the function <a class="reference external" href="https://github.com/lehkost/dramavis/blob/v0.4/dramalyzer.py#L318-L330"><code class="docutils literal notranslate"><span class="pre">get_structural_ranking_measures</span></code></a> treats network-based and count-based values separately and only then aggregates them to a combined overall ranking.</p>
+<p>The function adds the following rows to the data frame:</p>
+<ul class="simple">
+<li><p>(1) <code class="docutils literal notranslate"><span class="pre">avg_graph_rank</span></code>: a ranking based on the rankings of the network-values (<em>degree</em>, <em>closeness</em>, <em>betweenness</em>, <em>strength</em> or <em>weightedDegree</em> and <em>eigenvector centrality</em> or <em>eigenvector</em>)</p></li>
+<li><p>(2) <code class="docutils literal notranslate"><span class="pre">avg_content_rank</span></code>: a ranking based on the rankings of the count-based values (<em>frequency</em> or <em>numOfScenes</em>, <em>speech acts</em> and <em>words</em>)</p></li>
+<li><p>(3) <code class="docutils literal notranslate"><span class="pre">overall_avg</span></code>: the two rankings (1+2) are combined by calculating the mean</p></li>
+<li><p>(4) <code class="docutils literal notranslate"><span class="pre">overall_avg_rank</span></code>: based on the overall average (3) a ranking is created</p></li>
+</ul>
+<p>The following code is adapted accordingly to operate on the dataframe. The ranking stability measures are not implemented here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#renamed the columns to match the DraCor values here:</span>
+<span class="n">graph_ranks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;degree_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;closeness_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;betweenness_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;weightedDegree_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;eigenvector_rank&#39;</span><span class="p">]</span>
+<span class="n">content_ranks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;numOfScenes_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;numOfSpeechActs_rank&#39;</span><span class="p">,</span> <span class="s1">&#39;numOfWords_rank&#39;</span><span class="p">]</span>
+<span class="n">avg_graph_rank</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">graph_ranks</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+<span class="n">avg_content_rank</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">content_ranks</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;avg_graph_rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg_graph_rank</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;avg_content_rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg_content_rank</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;overall_avg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;avg_graph_rank&quot;</span><span class="p">,</span> <span class="s2">&quot;avg_content_rank&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;overall_avg_rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;overall_avg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>betweenness</th>
+      <th>degree</th>
+      <th>closeness</th>
+      <th>weightedDegree</th>
+      <th>eigenvector</th>
+      <th>numOfScenes</th>
+      <th>numOfSpeechActs</th>
+      <th>numOfWords</th>
+      <th>degree_rank</th>
+      <th>closeness_rank</th>
+      <th>...</th>
+      <th>numOfSpeechActs_rank</th>
+      <th>numOfWords_rank</th>
+      <th>centrality_rank_avg</th>
+      <th>centrality_rank_std</th>
+      <th>centrality_rank_avg_rank</th>
+      <th>centrality_rank_std_rank</th>
+      <th>avg_graph_rank</th>
+      <th>avg_content_rank</th>
+      <th>overall_avg</th>
+      <th>overall_avg_rank</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>der_prinz</th>
+      <td>0.467172</td>
+      <td>8</td>
+      <td>0.750000</td>
+      <td>20</td>
+      <td>0.320761</td>
+      <td>17</td>
+      <td>157</td>
+      <td>4002</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.250</td>
+      <td>0.145621</td>
+      <td>2.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>der_kammerdiener</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>6</td>
+      <td>33</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>13.0</td>
+      <td>11.000</td>
+      <td>0.133631</td>
+      <td>12.0</td>
+      <td>7.0</td>
+      <td>11.0</td>
+      <td>12.0</td>
+      <td>11.5</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>conti</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>2</td>
+      <td>0.055758</td>
+      <td>2</td>
+      <td>24</td>
+      <td>604</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>8.0</td>
+      <td>10.125</td>
+      <td>0.123879</td>
+      <td>11.0</td>
+      <td>5.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+      <td>10.5</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>marinelli</th>
+      <td>0.246970</td>
+      <td>9</td>
+      <td>0.800000</td>
+      <td>30</td>
+      <td>0.448985</td>
+      <td>19</td>
+      <td>221</td>
+      <td>4343</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.125</td>
+      <td>0.044194</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>camillo_rota</th>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>0.444444</td>
+      <td>1</td>
+      <td>0.055758</td>
+      <td>1</td>
+      <td>6</td>
+      <td>78</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>11.625</td>
+      <td>0.132583</td>
+      <td>13.0</td>
+      <td>6.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>claudia</th>
+      <td>0.045455</td>
+      <td>7</td>
+      <td>0.600000</td>
+      <td>19</td>
+      <td>0.382926</td>
+      <td>13</td>
+      <td>73</td>
+      <td>1581</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>3.875</td>
+      <td>0.169525</td>
+      <td>4.0</td>
+      <td>11.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>pirro</th>
+      <td>0.026515</td>
+      <td>5</td>
+      <td>0.545455</td>
+      <td>7</td>
+      <td>0.271944</td>
+      <td>4</td>
+      <td>25</td>
+      <td>263</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>7.625</td>
+      <td>0.188243</td>
+      <td>7.0</td>
+      <td>12.0</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>7.5</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>odoardo</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>15</td>
+      <td>0.354250</td>
+      <td>12</td>
+      <td>108</td>
+      <td>2441</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.375</td>
+      <td>0.064694</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>angelo</th>
+      <td>0.000000</td>
+      <td>2</td>
+      <td>0.480000</td>
+      <td>2</td>
+      <td>0.125318</td>
+      <td>2</td>
+      <td>28</td>
+      <td>487</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>9.625</td>
+      <td>0.093003</td>
+      <td>10.0</td>
+      <td>3.0</td>
+      <td>10.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>emilia</th>
+      <td>0.055051</td>
+      <td>6</td>
+      <td>0.666667</td>
+      <td>13</td>
+      <td>0.351365</td>
+      <td>7</td>
+      <td>64</td>
+      <td>1702</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>4.250</td>
+      <td>0.110801</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>appiani</th>
+      <td>0.003788</td>
+      <td>4</td>
+      <td>0.521739</td>
+      <td>8</td>
+      <td>0.252958</td>
+      <td>5</td>
+      <td>48</td>
+      <td>852</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>...</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>7.625</td>
+      <td>0.148467</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>9.0</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>battista</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>7</td>
+      <td>0.261445</td>
+      <td>4</td>
+      <td>11</td>
+      <td>152</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>8.125</td>
+      <td>0.253876</td>
+      <td>9.0</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>11.0</td>
+      <td>9.5</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>orsina</th>
+      <td>0.012121</td>
+      <td>4</td>
+      <td>0.600000</td>
+      <td>8</td>
+      <td>0.261947</td>
+      <td>6</td>
+      <td>64</td>
+      <td>2111</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.875</td>
+      <td>0.140749</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>5.5</td>
+      <td>6.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>13 rows × 24 columns</p>
+</div></div></div>
+</div>
+<p>Based on the calculation of <code class="docutils literal notranslate"><span class="pre">overall_avg_rank</span></code>, the “central” characters can be queried as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;overall_avg_rank&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;marinelli&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is also possible to output a table sorted by rank:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;centrality_rank_avg_rank&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id
+marinelli            1.0
+der_prinz            2.0
+odoardo              3.0
+claudia              4.0
+emilia               5.0
+orsina               6.0
+pirro                7.0
+appiani              7.0
+battista             9.0
+angelo              10.0
+conti               11.0
+der_kammerdiener    12.0
+camillo_rota        13.0
+Name: centrality_rank_avg_rank, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="catch-protagonist-notebook-source" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>This notebook was originally published in the <a class="reference external" href="https://github.com/dracor-org/dracor-notebooks">dracor-notebooks</a> GitHub repository and presented in the talk “To catch a protagonist … once again. An attempt to recreate a corpus-based study using Linked Data” at the <a class="reference external" href="https://www.distant-reading.net/events/conference-programme">Distant Reading project’s closing conference</a>. For the ExploreCor Training School it has been adapted to work with major version v1 of the DraCor API.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5-2-1_api-tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">DraCor API Tutorial</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../6_Reproducibility/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. Reproducibility in CLS Research</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-get-the-basic-measures">Step 1. Get the basic measures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-and-count-based-metrics-via-dracor-api">Network and count-based metrics via Dracor API</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-get-the-metrics-and-construct-a-pandas-data-frame">Preparation: Get the metrics and construct a pandas data frame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-the-ranks">Step 2. Calculate the ranks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-rank-on-average-and-standard-deviation-of-the-individual-rankings">Step 3. Rank on average and standard deviation of the individual rankings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-step-create-rankings-and-combined-rankings-of-network-based-and-count-based-metrics-separately">Additional Step: Create Rankings and combined rankings of network-based and count-based metrics separately</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The DraCor Collective
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
