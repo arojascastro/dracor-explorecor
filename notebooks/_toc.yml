@@ -5,6 +5,8 @@ format: jb-book
 root: intro
 chapters:
 - file: 1_Introduction/README.md
+  sections:
+  - file: 1_Introduction/1-3_DraCor_Showcase.ipynb
 - file: 2_Corpora_in_Research/README.md
 - file: 5_Exploring_Programmable_Corpora/README.md
   sections:
@@ -15,6 +17,6 @@ chapters:
     - file: 5_Exploring_Programmable_Corpora/5-2_Exploring_Programmable_Corpora_Advanced/5-2-2_catch-a-protagonist-in-dracor.ipynb
 - file: 6_Reproducibility/README.md
   sections:
-  - file: 6_Reproducibility/6-1_quickstart
+  - file: 6_Reproducibility/6-2_custom_local_dracor
 - file: 7_Open_Topics/README.md
 - file: bibliography.md

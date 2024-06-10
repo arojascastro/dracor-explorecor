@@ -3,7 +3,10 @@
 **Tuesday, June 11th, 4:00 p.m. – 5:30 p.m.**
 
 ## Tutors
-- tba 
+- Luca Giovannini 
+- Daniil Skorinkin 
+- Henny Sluyter-Gäthje
+- Peer Trilcke
 
 ## Description 
 In this session we’ll get hands on. We will use the DraCor API to request data and 

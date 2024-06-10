@@ -1,6 +1,9 @@
 services:
   dracor-dind-jupyterlab:
-    image: "ingoboerner/dracor-dind-jupyterlab:v1.0"
+    image: "dracor/dind-jupyterlab"
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: dracor-dind-jupyterlab
     privileged: true
     environment:

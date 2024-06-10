@@ -14,7 +14,7 @@ In this session, we will interactively discuss criteria for assessing the suitab
 ## Resources
 - Presentation “User Perspectives on Corpora in Research” 
 	- Link: coming after the session
-	- Description: coming after the session
+	- Description: This presentation introduces criteria for assessing the suitability of digital corpora for research in the field of Computational Literary Studies. It thus provides the foundation for the interactive game designed for this session.
 - Game accessories 
 	- Link: coming after the session
 	- Description: This interactive game encourages the player to evaluate digital corpora with respect to their suitability for research purposes.
